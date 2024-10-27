@@ -1,0 +1,375 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAATGQ70FjbXCegdSrz9MJGQ9F7MDreRj15Q&s');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container */
+        .container, .container1 {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        .container1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 30px;
+        }
+
+        /* Header */
+        header {
+            background: #F5F5DC;
+            color: black;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: red;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: yellow;
+            color: black;
+            border-radius: 5px;
+        }
+
+        .active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('file:///C:/Users/ABC/Desktop/download3.jpg') no-repeat center center/cover;
+            position: relative;
+        }
+
+        .hero-content {
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            background: #ff4c60;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+
+        .cta-btn:hover {
+            background: #e04355;
+        }
+
+        /* Destination and Packages Sections */
+        .destinations, .packages {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .destination-box, .package-box {
+            display: inline-block;
+            width: 30%;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+        }
+
+        .destination-box h3, .package-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .destination-box p, .package-box p {
+            font-size: 1rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 50px;
+        }
+
+        /* Contact Form Styling */
+        .contact-form {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #ff4c60;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #e04355;
+        }
+
+        /* Slideshow Styling */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+			height: auto;
+            margin: auto;
+            text-align: center;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+			height: 60vh;
+        }
+
+        .active-slide {
+            display: block;
+        }
+		/* Services Section */
+        .services {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .service-box {
+            display: inline-block;
+            width: 30%;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 1rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Travelio - "Your Dream Vacation Starts Here"</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container1">
+            <h2>Your dream vacation is here</h2>
+            <p>Take advantage of amazing plans</p>
+            <a href="#" class="cta-btn">Get Started</a>
+        </div>
+    </section>
+	
+	</section>
+
+    <!-- About Section -->
+    <section id="about" class="container" style="padding: 50px; text-align: center;">
+        <h2>About Us</h2>
+        <p>We are dedicated to making your travel dreams come true with tailored packages and personalized experiences.</p>
+    </section>
+	
+	<!-- Slideshow HTML -->
+    <div class="slideshow-container">
+        <img class="slide" src="file:///C:/Users/ABC/Desktop/download4.jpg" alt="Slide 1">
+        <img class="slide" src="file:///C:/Users/ABC/Desktop/download5.jpg" alt="Slide 2">
+        <img class="slide" src="file:///C:/Users/ABC/Desktop/download6.jpg" alt="Slide 3">
+    </div>
+	
+	<!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-box">
+                <h3>Personalized Itineraries</h3>
+                <p>Get custom travel plans designed just for you, taking care of every detail to suit your interests and preferences.</p>
+            </div>
+            <div class="service-box">
+                <h3>24/7 Support</h3>
+                <p>Enjoy peace of mind with our round-the-clock customer support to assist you at any time during your journey.</p>
+            </div>
+            <div class="service-box">
+                <h3>Luxury Accommodation</h3>
+                <p>Stay in the finest hotels and resorts with exclusive amenities, all included in your custom travel package.</p>
+            </div>
+            <div class="service-box">
+                <h3>Guided Tours</h3>
+                <p>Explore with knowledgeable guides who provide in-depth insights and cultural experiences at each destination.</p>
+            </div>
+            <div class="service-box">
+                <h3>Travel Insurance</h3>
+                <p>Stay protected on your travels with comprehensive insurance plans covering health, emergencies, and cancellations.</p>
+            </div>
+            <div class="service-box">
+                <h3>Transportation Services</h3>
+                <p>Whether it’s airport transfers or local sightseeing, we provide seamless transportation arrangements throughout your trip.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="formMessage" style="color: red;"></p>
+    </section>
+	
+	<!-- Toggle Content Section -->
+    <section class="toggle-section" style="text-align: center; margin: 20px;">
+        <button onclick="toggleContent()">Show More Info</button>
+        <div id="toggleContent" style="display: none;">
+            <p>Explore exclusive offers and make your dream vacation unforgettable!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Form Validation -->
+    <script>
+		// Toggle content visibility
+        function toggleContent() {
+            const content = document.getElementById("toggleContent");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+		
+        let slideIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active-slide");
+            }
+            slides[index].classList.add("active-slide");
+        }
+		//slideshow
+        function nextSlide() {
+            const slides = document.getElementsByClassName("slide");
+            slideIndex = (slideIndex + 1) % slides.length;
+            showSlide(slideIndex);
+        }
+
+        // Set up automatic slideshow
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+        // Initialize the slideshow
+        showSlide(slideIndex);
+        function validateForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            const formMessage = document.getElementById("formMessage");
+
+            if (!name || !email || !message) {
+                formMessage.textContent = "Please fill out all fields.";
+                return false;
+            }
+            formMessage.textContent = "Thank you for your message!";
+            return true;
+        }
+    </script>
+</body>
+</html>
